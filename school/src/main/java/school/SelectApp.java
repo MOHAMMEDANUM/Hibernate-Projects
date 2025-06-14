@@ -5,7 +5,7 @@ package school;
 	import javax.persistence.EntityTransaction;
 	import javax.persistence.Persistence;
 
-	public class DeleteApp {
+	public class SelectApp {
 
 		public static void main(String[] args) {
 			
@@ -15,13 +15,12 @@ package school;
 			
 			EntityTransaction et=em.getTransaction();
 			
-			Student s = em.find(Student.class,1);
+			Student s1 =em.find(Student.class,1);
+			Student s2 =em.find(Student.class,2);
 			
-			et.begin();
-			
-			em.remove(s);
-			
-			et.commit();
+			System.out.println(s1);
+			System.out.println(s2);
+				
 		}
 		
 	}
